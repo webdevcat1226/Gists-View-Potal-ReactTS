@@ -8,9 +8,8 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         left: 0,
         right: 0,
-        bottom: 0,
+        bottom: 100,
         zIndex: 9999,
-        // display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
@@ -18,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     spinner: {
         height: 5,
+        margin: '50px'
     },
 }));
 
@@ -26,6 +26,14 @@ export default function LinearIndeterminate() {
 
     return (
         <div className={classes.root}>
+            <LinearProgress className={classes.spinner} />
+            <LinearProgress className={classes.spinner} color="secondary" />
+            <LinearProgress className={classes.spinner} />
+            <LinearProgress className={classes.spinner} color="secondary" />
+            <LinearProgress className={classes.spinner} />
+            <LinearProgress className={classes.spinner} color="secondary" />
+            <LinearProgress className={classes.spinner} />
+            <LinearProgress className={classes.spinner} color="secondary" />
             <LinearProgress className={classes.spinner} />
             <LinearProgress className={classes.spinner} color="secondary" />
         </div>
