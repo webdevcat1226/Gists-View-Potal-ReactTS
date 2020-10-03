@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from "./views/Home";
 
 function App() {
     return (
         <div className="App">
-            React Welcome
+            <Home/>
         </div>
     );
 }
