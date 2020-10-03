@@ -1,7 +1,8 @@
 import {actionTypes} from "../actions";
 
 const initStatus = {
-    authResult: JSON.parse(localStorage.authResult || '{}')
+    authResult: JSON.parse(localStorage.authResult || '{}'),
+    pageNum: 1
 }
 
 export default (store = initStatus, action) => {
@@ -9,6 +10,8 @@ export default (store = initStatus, action) => {
         case actionTypes.SET_AUTH:
             localStorage.authResult = JSON.stringify(action.authResult);
             return {...store, authResult: action.authResult}
+        case actionTypes.SET_PAGE_NUM:
+            return {...store, pageNum: action.pageNum}
         default:
             return store;
     }

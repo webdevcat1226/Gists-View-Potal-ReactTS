@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import {ThemeProvider} from '@material-ui/styles';
 
 import App from './App';
+import './index.css'
 import * as serviceWorker from './serviceWorker';
 import DefaultTheme from './themes/Default';
 import history from "./history";

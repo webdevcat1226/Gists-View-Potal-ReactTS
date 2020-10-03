@@ -12,15 +12,16 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        margin: '15px 0',
+        padding: '15px 0',
         width: '100%',
+        borderBottom: '1px solid lightgray'
     },
     gistAvatar: {
-        width: 30,
+        width: 50,
         marginRight: 10
     },
     gistFileName: {
-
+        fontFamily: 'Roboto, sans-self'
     }
 }))
 
