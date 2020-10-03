@@ -1,14 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import {Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {ThemeProvider} from '@material-ui/styles';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import DefaultTheme from './themes/Default';
+import history from "./history";
+import store from './store'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <ThemeProvider theme={DefaultTheme}>
+                <Router history={history}>
+                    <Switch>
+                        <Route path="/" component={App}/>
+                    </Switch>
+                </Router>
+            </ThemeProvider>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
